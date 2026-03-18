@@ -192,7 +192,6 @@ impl eframe::App for ProgramApp{
                                 .min_col_width(100.0) 
                                 .show(ui, |ui| {
                                     
-                                    // Fila 1
                                     ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
                                         ui.label(egui::RichText::new("Fecha inicial:").strong());
                                     });
