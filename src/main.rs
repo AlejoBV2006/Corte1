@@ -331,41 +331,23 @@ impl eframe::App for ProgramApp{
                 Pantalla::Images => {
 
                     ui.vertical_centered(|ui| {
-
                         if ui.button("Cargar Imagen").clicked() {
-
                             if let Some(path) = rfd::FileDialog::new().pick_file(){
-
-
-
                                 self.uploaded_image = Some(format!("file://{}", path.to_string_lossy().replace("\\", "/")));
-
                             }
-
                         }
-
                     });
 
-
-
                     ui.add_space(20.0);
-
-
 
                     if let Some(url) = &self.uploaded_image {
 
                         ui.add(
-
                             egui::Image::new(url)
-
                                 .max_width(400.0)
-
                                 .rounding(10.0)
-
                         );
-
                     }
-
                 }
             }
         });
