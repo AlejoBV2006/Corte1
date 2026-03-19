@@ -63,16 +63,51 @@ impl Default for ProgramApp{
                 "Salmon".to_string(),
         ];
 
-        let mut games: Vec<(String, bool)> =Vec::new(); 
-        match std::fs::read_to_string("C:/Users/santi/Desktop/Programas/Rust/prueba2/src/categorias.txt") {
-            Ok(content) => {
-                for category in content.lines(){
-                    games.push((category.to_string(), false));
-                }
-            }Err(e) =>{
-                println!("{}", e);
-            }
-        }
+        let games: Vec<(String, bool)> = vec![
+            ("Accion".to_string(), false),
+            ("Aventura".to_string(), false),
+            ("Casuales".to_string(), false),
+            ("Un".to_string(), false),
+            ("jugador".to_string(), false),
+            ("Rol".to_string(), false),
+            ("Estrategia".to_string(), false),
+            ("2D".to_string(), false),
+            ("Acceso".to_string(), false),
+            ("anticipado".to_string(), false),
+            ("Free".to_string(), false),
+            ("to".to_string(), false),
+            ("Play".to_string(), false),
+            ("3D".to_string(), false),
+            ("Ambientales".to_string(), false),
+            ("Coloridos".to_string(), false),
+            ("Buena".to_string(), false),
+            ("Trama".to_string(), false),
+            ("Exploracion".to_string(), false),
+            ("Fantasia".to_string(), false),
+            ("Adorables".to_string(), false),
+            ("Multijugador".to_string(), false),
+            ("Pixelados".to_string(), false),
+            ("Puzles".to_string(), false),
+            ("Primera".to_string(), false),
+            ("Persona".to_string(), false),
+            ("Combate".to_string(), false),
+            ("Accion".to_string(), false),
+            ("y".to_string(), false),
+            ("Aventura".to_string(), false),
+            ("Relajantes".to_string(), false),
+            ("Divertidos".to_string(), false),
+            ("Estilizados".to_string(), false),
+            ("Anime".to_string(), false),
+            ("Arcade".to_string(), false),
+            ("Multijugador".to_string(), false),
+            ("Masivo".to_string(), false),
+            ("Para".to_string(), false),
+            ("mando".to_string(), false),
+            ("Terror".to_string(), false),
+            ("Deportes".to_string(), false),
+            ("Ciencia".to_string(), false),
+            ("Ficcion".to_string(), false),
+        ];
             
 
         Self {
